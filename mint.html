@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+    <style>
+      body {
+        margin: 0;
+        background-color: #ECEEF1;
+        font-family: "AvenirNext", Avenir, "Helvetica Neue", Helvetica, Arial sans-serif;
+      }
+      header {
+        height: 50px;
+      }
+      header > nav {
+        float: right;
+      }
+      p {
+        margin: 5px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul > li {
+        display: inline;
+        margin-left: 10px;
+      }
+      footer {
+        text-align: center;
+      }
+      a {
+        color: #1D85CB;
+        text-decoration: none;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+      }
+      form {
+        border: 1px solid #C7C7C7;
+        box-sizing: border-box;
+        padding: 25px;
+        background-color: white;
+      }
+      .container {
+        width: 400px;
+        text-align: center;
+      }
+      .links {
+
+      }
+      .copyright {
+        text-align: center;
+        font-size: 12px;
+        font-family: "AvenirNext", Avenir, "Helvetica Neue", Helvetica, Arial sans-serif;
+      }
+      .priv {
+        height: 40px;
+        background-color: #6B6C72;
+        border: none;
+        border-radius: 4px;
+        float: right;
+        margin-right: 80px;
+        color: #D6D6D8;
+        }
+        .terms {
+          font-style: italic;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        input {
+          width: 300px;
+          margin-top: 10px;
+        }
+        label {
+          float: left;
+          padding-left: 15px;
+          margin-top: 30px;
+        }
+        .submit {
+          background-color: #0077C5;
+          width: 316px;
+          border: none;
+          height: 50px;
+          color: white;
+          border-radius: 5px;
+          margin-top: 30px;
+        }
+        h2 {
+          margin-top: 5px;
+        }
+        .registration {
+          display: flex;
+          align-items: center;
+        }
+        .ps {
+          text-align: left;
+        }
+        .signin {
+          background-color: #0077C5;
+          border: none;
+          height: 35px;
+          color: white;
+          border-radius: 5px;
+          width: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="registration">
+        <div class="ps">
+          <p>Already have an Intuit account?</p>
+          <a href="" style="margin-left: 5px;">I forgot my password</a>
+        </div>
+        <button class="signin">Sign In</button>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="title">INTUIT</h1>
+        <div class="links">
+          <ul>
+            <li style="margin-left:0">
+              <i class="fa fa-golf-ball fa-lg" style="margin-left: 30px;"></i>
+              mint
+            </li>
+            <li>
+              <i class="fa fa-euro-sign fa-lg" style="margin-left: 30px;"></i>
+              quickbooks
+            </li>
+            <li>
+              <i class="fa fa-check fa-lg" style="margin-left: 30px;"></i>
+              turbotax
+            </li>
+          </ul>
+        </div>
+        <form action="">
+          <h2 class="form-title">Create and Intuit account</h2>
+          <p>One account for everything Intuit, including Mint.</p>
+          <a href="#">Learn more</a>
+          <br />
+          <label>
+            Email address
+          </label>
+            <input type="email">
+          <label>
+            Phone (recommended)
+          </label>
+            <input type="tel">
+            <p style="font-size: 10px;">Standard call, messaging or data rates may apply.</p>
+          <label>
+            Password
+          </label>
+            <input type="password">
+          <input type="submit" class="submit" value="Create Account">
+          <div class="terms">
+            <p>By clicking Create Account, you agree to our
+            <a>Terms</a> and have read and acknowledge our <a>Global Privacy Statement</a>.</p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <nav class="misc">
+        <ul>
+          <li>
+            <a href="">Legal</a>
+          </li>
+          <li>
+            <a href="">Privacy</a>
+          </li>
+          <li>
+            <a href="">Security</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p>© 2020 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.</p>
+        <p>Terms and conditions, features, support, pricing, and service options subject to change without notice.</p>
+      </div>
+      <div class="privacy-settings">
+        <button class="priv">Privacy Settings</button>
+      </div>
+    </footer>
+  </body>
+</html>

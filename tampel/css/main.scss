@@ -1,0 +1,372 @@
+@import 'reset';
+$colornames: "red" "orange" "orange-i" "brown" "brown-i" "cherry" "cherry-i"
+"river" "gray" "gray-i" "blue" "blue-i" "green" "yellow" "white" "black" "dark";
+$colors: (
+  "red": rgb(194,68,48),
+  "orange": rgb(229,96,56),
+  "orange-i": rgb(235,232,222),
+  "brown": rgb(64,56,40),
+  "brown-i": rgb(245,242,240),
+  "cherry": rgb(210,143,209),
+  "cherry-i": rgb(240, 29, 118),
+  "river": rgb(143,188,187),
+  "gray": rgb(149,146,142),
+  "gray-i": rgb(214, 208, 193),
+  "blue": rgb(120, 204, 255),
+  "blue-i": rgb(8, 174, 213),
+  "green": rgb(120, 179, 53)/*rgb(150,219,70)*/,
+  "yellow": rgb(255,240,80),
+  "white": rgb(255,255,255),
+  "black": rgb(51, 51, 51),
+  "dark": rgb(29, 29, 29));
+@mixin bgcolor($name) {
+  background-color: map-get($colors, $name);
+}
+@mixin txcolor($name) {
+  color: map-get($colors, $name);
+}
+/* Font variables */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Baumans');
+.ubuntu-font {font-family: "Ubuntu", sans-serif !important;}
+.roboto-font {font-family: "Roboto Condensed", sans-serif !important;}
+.open-sans-font {font-family: "Open Sans", sans-serif !important;}
+/* Icon sources */
+@import url("https://pro.fontawesome.com/releases/v5.15.1/css/all.css");
+/* Grid */
+@mixin make-grid ($col: 16, $gap: 0) {
+  $percentage: 100%/$col;
+  display: grid;
+  grid-template-columns: repeat($col, $percentage);
+  grid-gap: $gap;
+}
+@mixin set-main ($h: auto, $w: auto, $m: auto, $p: 0, $b: none, $br: 0) {
+  height: $h;
+  width: $w;
+  margin: $m;
+  padding: $p;
+  border: $b;
+  border-radius: $br;
+}
+@mixin make-button ($h: auto, $w: auto, $m: auto, $p: 0, $b: none, $br: 0) {
+  @include set-main($h, $w, $m, $p, $b, $br);
+  cursor: pointer;
+  @include bgcolor("bg-gray");
+}
+@mixin make-input ($h: auto, $w: auto, $m: auto, $p: 0, $b: none, $br: 0) {
+  @include set-main($h, $w, $m, $p, $b, $br);
+}
+@mixin make-div ($h: auto, $w: auto, $m: auto, $p: 0, $b: none, $br: 0) {
+  @include set-main($h, $w, $m, $p, $b, $br);
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Only change these */
+$col: 16; /* For grids */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Markup Definitions */
+$perc: 100%/$col;
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  color: map-get($colors, "black");
+}
+.grid-layout {
+  @include make-grid($col, 0);
+}
+@for $n from 1 through $col {
+  .col-#{$n} {
+    grid-column: span $n;
+    overflow: hidden;
+  }
+}
+@for $n from 1 through 5 {
+  .btn-#{$n*5} {
+    @include make-button($p: $n*5px)
+  }
+  .btn-round-#{$n*25} {
+    @include make-button($h: $n*25px, $w: $n*25px, $br: 50%)
+  }
+  .btn-corner-#{$n*2} {
+    @include make-button($p: 5px 20px, $br: $n*2px)
+  }
+  .input-#{$n*5} {
+    @include make-input($p: $n*5px);
+  }
+  .input-corner-#{$n*2} {
+    @include make-input($p: 10px, $br: $n*2px);
+  }
+  h#{$n} {
+    font-size: 45px - $n*5px !important;
+    width: 100%;
+  }
+  .bor-#{$n} {
+    border: $n*1px solid !important;
+  }
+  .bor-left-#{$n} {
+    border-left: $n*1px solid !important;
+  }
+  .bor-right-#{$n} {
+    border-right: $n*1px solid !important;
+  }
+  .bor-top-#{$n} {
+    border-top: $n*1px solid !important;
+  }
+  .bor-bottom-#{$n} {
+    border-bottom: $n*1px solid !important;
+  }
+  .bor-rad-#{$n} {
+    border-radius: $n*1px !important;
+  }
+}
+@for $n from 1 to 60 {
+  .size-#{$n} {
+    font-size: $n*1px !important;
+  }
+  .pad-#{$n*5} {
+    padding: $n*5px !important;
+  }
+  .pad-left-#{$n*5} {
+    padding-left: $n*5px !important;
+  }
+  .pad-right-#{$n*5} {
+    padding-right: $n*5px !important;
+  }
+  .pad-top-#{$n*5} {
+    padding-top: $n*5px !important;
+  }
+  .pad-bottom-#{$n*5} {
+    padding-bottom: $n*5px !important;
+  }
+  .mar-#{$n*5} {
+    margin: $n*5px !important;
+  }
+  .mar-left-#{$n*5} {
+    margin-left: $n*5px !important;
+  }
+  .mar-right-#{$n*5} {
+    margin-right: $n*5px !important;
+  }
+  .mar-top-#{$n*5} {
+    margin-top: $n*5px !important;
+  }
+  .mar-bottom-#{$n*5} {
+    margin-bottom: $n*5px !important;
+  }
+}
+@for $c from 1 to length($colors)+1 {
+  .bg-#{nth($colornames,$c)} {
+      background-color: map-get($colors,nth($colornames,$c)) !important;
+  }
+  .color-#{nth($colornames,$c)} {
+      color: map-get($colors,nth($colornames,$c)) !important;
+  }
+  .bor-#{nth($colornames,$c)} {
+      border-color: map-get($colors,nth($colornames,$c)) !important;
+  }
+}
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-input {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.div-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.div-image {
+  @include make-div($w: 100%);
+  overflow: hidden;
+}
+.card {
+  display: flex;
+  margin-top: 25px;
+  width: 300px;
+  .card-text {
+    p {
+      /*font-family: 'Open-Sans' !important;*/
+      font-size: 14px !important;
+      line-height: 1.5em !important;
+      padding-top: 5px !important;
+    }
+  }
+}
+.card-col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 200px;
+  .card-header {
+    padding: 20px 0;
+    font-size: 14px !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .card-text {
+    p {
+      font-family: 'Ubuntu' !important;
+      font-size: 14px !important;
+      line-height: 2em !important;
+      padding-top: 5px !important;
+    }
+  }
+}
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.text-cap {
+  text-transform: capitalize;
+}
+.text-low {
+  text-transform: lowercase;
+}
+.text-up {
+  text-transform: uppercase;
+}
+.weigh100 {font-weight: 100;}
+.weigh300 {font-weight: 300;}
+.weigh500 {font-weight: 500;}
+.weigh700 {font-weight: 700;}
+.weigh900 {font-weight: 900;}
+.hover-light {
+  &:hover {filter: brightness(110%);}
+}
+.hover-shine {
+  &:hover {filter: brightness(120%);}
+}
+.hover-dark {
+  &:hover {filter: brightness(90%);}
+}
+.hover-dead {
+  &:hover {filter: brightness(80%);}
+}
+
+/* Not fixed for now */
+header {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav {
+  flex: 1;
+  display: inline-flex;
+  justify-content: flex-end;
+  ul {
+    list-style: none;
+    display: inline-flex;
+    li {
+      margin-left: 20px;
+      text-transform: uppercase;
+    }
+  }
+}
+.flex {
+  display: flex;
+}
+.just {
+  justify-content: center;
+}
+.align {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.between {
+  justify-content: space-between;
+}
+.around {
+  justify-content: space-around;
+}
+.flex-col {
+  flex-direction: column;
+}
+.max-w900 {
+  max-width: 900px;
+}
+h3 {font-weight: 700;}
+footer {
+  background-color: map-get($colors,"black");
+  * {
+    color: map-get($colors,"white");
+  }
+}
+
+.social {
+  ul {
+    list-style: none;
+    display: inline-flex;
+    li {
+      margin-left: 20px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.fa { font-family: 'Font Awesome 5 Pro' !important; }
+.fab { font-family: "Font Awesome 5 Brands" !important; }
+/*
+++++++++++++++++++++++++++++++++++++++++++++
+1 - Nesting
+body {
+  nav {
+    ul {
+      li {
+        .link {}
+        @media screen and (max-width:1000px) {}
+      }
+    }
+  }
+}
+++++++++++++++++++++++++++++++++++++++++++++
+2 - Variables
+$lambo-green = "#313131";
+$base-font = "Georgia";
+a {
+  color: $lambo-green;
+  font-family: $base-font;
+}
+++++++++++++++++++++++++++++++++++++++++++++
+3 - Mixins
+@mixin highlighted-text {
+  background-color: $lambo-green;
+  color: darken(red, 25%);
+}
+@mixin round-corners ($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+span {
+  @include highlighted-text;
+}
+button {
+  @include round-corners;
+}
+++++++++++++++++++++++++++++++++++++++++++++
+4 - Math
+@mixin total-width ($width1, $width2) {
+  width = $width1 + $width2;
+}
+
+*/

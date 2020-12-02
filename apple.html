@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../reset.css" >
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-width: 1036px;
+        max-width: 1440px;
+      }
+      main {
+        margin-bottom: 2px;
+        width: 100%;
+        min-height: 518px;
+        height: 67vh;
+        background-image: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg);
+        background-size: 140% cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+      }
+      .props {
+        height: 200px;
+        display: flex;
+      }
+      .prop {
+        width: 25%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 2px;
+      }
+      .prop:last-child {
+        margin-right: 0;
+      }
+      .prop1 {
+        background-image: url(https://web.archive.org/web/20140301004349im_/http://images.apple.com/home/images/promo_iphone5s.jpg);
+      }
+      .prop2 {
+        background-image: url(https://web.archive.org/web/20140301004350im_/http://images.apple.com/home/images/promo_iphone5c.jpg);
+      }
+      .prop3 {
+        background-image: url(https://web.archive.org/web/20140301004351im_/http://images.apple.com/home/images/promo_30_years.jpg);
+      }
+      .prop4 {
+        background-image: url(https://web.archive.org/web/20140301004352im_/http://images.apple.com/home/images/promo_supplier_responsibility.jpg);
+      }
+      footer {
+        height: 90px;
+        font-size: 12px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #878787;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      .footbox {
+        width: 50%;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding-left: 20px;
+        /*border: 1px solid salmon;*/
+        height: 25px;
+      }
+      .footbox > a {
+        text-decoration: none;
+        color: #53AEDC;
+      }
+      .terms {
+        margin-top: 0;
+      }
+      .navbar {
+        margin-top: 80px;
+        /*background-color: #606060;*/
+        background-image: linear-gradient(180deg, rgba(115,115,115,1) 0%, rgba(95,95,95,1) 49%, rgba(112,112,112,1) 50%, rgba(138,138,138,1) 100%);
+        margin-left: 30px;
+        margin-right: 30px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        box-shadow: inset 0px 0px 15px 0px #929292;
+      }
+      .searchbar {
+        width: 100px;
+        height: 20px;
+        border-radius: 15px;
+        background-color: transparent;
+      }
+      .navbar > ul {
+        /*border: 2px solid sienna;*/
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+      .navbar > ul > li {
+        flex: 1;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #5C5C5C;
+      }
+      .navbar > ul > li:last-child {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <nav class="navbar">
+          <ul>
+            <li><i class="fab fa-apple fa-lg"></i></li>
+            <li>Store</li>
+            <li>Mac</li>
+            <li>iPod</li>
+            <li>iPhone</li>
+            <li>iPad</li>
+            <li>iTunes</li>
+            <li>Support</li>
+            <li><input type="search" class="searchbar"></li>
+          </ul>
+        </nav>
+      </main>
+      <section class="props">
+        <div class="prop1 prop"></div>
+        <div class="prop2 prop"></div>
+        <div class="prop3 prop"></div>
+        <div class="prop4 prop"></div>
+      </section>
+      <footer>
+        <div class="store-info footbox">
+          Shop the <a href="#">Apple Online Store</a> (1-800-MY-APPLE), visit an <a href="#">Apple Retail Store</a>, or find a <a href="#">reseller</a>.
+        </div>
+        <nav class="footer-nav footbox">
+            <a>Site Map</a> |
+            <a>Hot News</a> |
+            <a>RSS Feeds</a> |
+            <a>Media Info</a> |
+            <a>Environment</a> |
+            <a>Job Opportunities</a> |
+            <a>Contact Us</a> |
+            <a><i class="fa fa-globe-americas"></i></a>
+        </nav>
+        <div class="terms footbox">
+          Copyright © 2014 Apple Inc. All rights reserved.
+            <a>Terms of Use</a> |
+            <a>Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

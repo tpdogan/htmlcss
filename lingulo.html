@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <title>HTML5 responsive website</title>
+    <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'/>
+    <script src="js/modernizr.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script type="text\/javascript" src="js\/1.7.2.jquery.min"><\/script>')</script>
+    <script src="lightbox/js/lightbox.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>TamPel RWB</h1>
+      <p>Responsive Web Design</p>
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)">Home</a></li>
+          <li><a href="javascript:void(0)">Portfolio</a></li>
+          <li><a href="javascript:void(0)">About</a></li>
+          <li><a href="javascript:void(0)">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h2 class="hidden">Tamer Pelin</h2>
+      <article id="slider_content1">
+        <h3>Header image 1</h3>
+        <p>Teaser image 1</p>
+        <a class="button" href="#">Read more image 1</a>
+      </article>
+      <article id="slider_content2">
+        <h3>Header image 2</h3>
+        <p>Teaser image 3</p>
+        <a class="button" href="#">Read more image 2</a>
+      </article>
+      <article id="slider_content3">
+        <h3>Header image 3</h3>
+        <p>Teaser image 3</p>
+        <a class="button" href="#">Read more image 3</a>
+      </article>
+      <div class="slides">
+        <img src="img/placeholder.jpg" alt="Some alt text">
+        <img src="img/placeholder.jpg" alt="Some alt text">
+        <img src="img/placeholder.jpg" alt="Some alt text">
+      </div>
+    </section>
+
+    <section id="spacer">
+      <h2 class="hidden">Spacer</h2>
+      <p>Text near the search field</p>
+      <div class="search">
+        <form action="#">
+          <input type="text" name="sitesearch" value="Search...">
+          <input type="submit" name="start_search" class="button" value="Search">
+        </form>
+      </div>
+    </section>
+    
+    <section id="boxcontent">
+      <h2 class="hidden">Articles</h2>
+      <article>
+        <img src="img/placeholder.jpg" alt="alt text">
+        <h3>H3 title</h3>
+        <p>This article is about lorem ipsum dolores</p>
+      </article>
+      <article>
+        <img src="img/placeholder.jpg" alt="alt text">
+        <h3>H3 title</h3>
+        <p>This article is about lorem ipsum dolores</p>
+      </article>
+      <article>
+        <img src="img/placeholder.jpg" alt="alt text">
+        <h3>H3 title</h3>
+        <p>This article is about lorem ipsum dolores</p>
+      </article>
+      <br class="clear"/>
+    </section>
+
+    <section id="four-columns">
+      <h2>More Articles</h2>
+      <article class="img-item">
+        <h3 class="hidden">Article image</h3>
+        <figure>
+          <a href="img/placeholder.jpg" rel="lightbox" title="The title">
+            <span class="thumb-screen"></span>
+            <img src="img/placeholder.jpg" alt="Some alt text">
+            <caption>
+              <strong>Photo by: Tam Pel</strong>
+              This image is great
+            </caption>
+          </a>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Article image</h3>
+        <figure>
+          <a href="img/placeholder.jpg" rel="lightbox" title="The title">
+            <span class="thumb-screen"></span>
+            <img src="img/placeholder.jpg" alt="Some alt text">
+            <caption>
+              <strong>Photo by: Tam Pel</strong>
+              This image is great
+            </caption>
+          </a>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Article image</h3>
+        <figure>
+          <a href="img/placeholder.jpg" rel="lightbox" title="The title">
+            <span class="thumb-screen"></span>
+            <img src="img/placeholder.jpg" alt="Some alt text">
+            <caption>
+              <strong>Photo by: Tam Pel</strong>
+              This image is great
+            </caption>
+          </a>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Article image</h3>
+        <figure>
+          <a href="img/placeholder.jpg" rel="lightbox" title="The title">
+            <span class="thumb-screen"></span>
+            <img src="img/placeholder.jpg" alt="Some alt text">
+            <caption>
+              <strong>Photo by: Tam Pel</strong>
+              This image is great
+            </caption>
+          </a>
+        </figure>
+      </article>
+      <br class="clear"/>
+    </section>
+
+    <section id="text-columns">
+      <h2 class="hidden">2 column with 3 elements</h2>
+      <article>
+        <h3>Inner text</h3>
+        <p>More text for left column</p>
+        <p>Even more text for left column</p>
+      </article>
+      <section class="column2">
+        <h3 class="hidden">Inside a column</h3>
+        <article class="row">
+          <h4 class="hidden">This is deep</h4>
+          <img src="img/placeholder.jpg" alt="Deep alt" width="80" class="rocket">
+          <p>Deeper textses</p>
+        </article>
+      </section>
+    </section>
+
+    <footer>
+      <h2 class="hidden">Footer head</h2>
+      <section id="copyright">
+        <h3 class="hidden">Copyright notice</h3>
+        <div class="wrapper">
+          <div class="social">
+            <a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="25"></a>
+            <a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="25"></a>
+            <a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="25"></a>
+            <a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="25"></a>
+            <a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="25"></a>
+          </div>
+          &copy; Copyright 2020 by <a href="#">Tampel</a>. All Rights Reserved.
+        </div>
+      </section>
+      <section class="wrapper">
+        <h3 class="hidden">Footer content</h3>
+        <article class="column leftlist">
+          <h4>Leftlist</h4>
+          Left list text no paragraph
+        </article>
+        <article class="column midlist">
+          <h4>Restlist</h4>
+          <ul>
+            <li><a href="javascript:void(0)">List link1</a></li>
+            <li><a href="javascript:void(0)">List link2</a></li>
+            <li><a href="javascript:void(0)">List link3</a></li>
+            <li><a href="javascript:void(0)">List link4</a></li>
+          </ul>
+        </article>
+        <article class="column rightlist">
+          <h4>Restlist</h4>
+          <ul>
+            <li><a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="80"><span>West hasewischt</span></a></li>
+            <li><a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="80"><span>West hasewischt</span></a></li>
+            <li><a href="javascript:void(0)"><img src="img/placeholder.jpg" alt="googleplus" width="80"><span>West hasewischt</span></a></li>
+          </ul>
+        </article>
+      </section>
+    </footer>
+  </body>
+</html>
